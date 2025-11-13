@@ -5,7 +5,6 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import PageTransition from "../../components/PageTransition";
 import ProjectModal, { Project } from "../../components/ProjectModal";
-import { b } from "framer-motion/client";
 
 export default function WorksPage() {
   // サンプルデータ（実際には API や CMS から取得する等）
@@ -42,19 +41,51 @@ export default function WorksPage() {
 
   return (
     <PageTransition>
-      <section className="works">
-        <h1>My Works</h1>
-        <div className="projects">
-          {projects.map((project) => (
+      <section className="space-y-4">
+        <div className="space-y-2">
+          <p className="text-terminal-cyan">
+            <span className="text-terminal-green">tsujino@portfolio</span>
+            <span className="text-terminal-text">:</span>
+            <span className="text-terminal-blue">~</span>
+            <span className="text-terminal-text">$ ls -la ./projects/</span>
+          </p>
+          <div className="pl-4 border-l-2 border-terminal-green/30 space-y-4">
+            <h1 className="text-2xl font-bold text-terminal-white">My Works</h1>
+            <p className="text-terminal-text/70 text-sm">
+              total {projects.length} projects
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+          {projects.map((project, index) => (
             <div
               key={project.slug}
-              className="project-card"
+              className="bg-terminal-bg/50 border border-terminal-blue/30 rounded p-4 hover:border-terminal-blue hover:shadow-lg hover:shadow-terminal-blue/20 transition-all cursor-pointer group"
               onClick={() => handleProjectClick(project)}
             >
-              <h2>{project.title}</h2>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-terminal-yellow text-sm">
+                  <span className="group-hover:text-terminal-cyan transition-colors">
+                    [{String(index + 1).padStart(2, '0')}]
+                  </span>
+                  <span className="text-terminal-green">📁</span>
+                  <span className="text-terminal-text/70">project_{index + 1}.sh</span>
+                </div>
+                <h2 className="text-terminal-cyan font-semibold text-sm leading-tight group-hover:text-terminal-white transition-colors">
+                  {project.title}
+                </h2>
+                <p className="text-terminal-green text-xs">
+                  → Click to execute
+                </p>
+              </div>
             </div>
           ))}
         </div>
+
+        <p className="text-terminal-green mt-4 text-sm">
+          [INFO] {projects.length} directories, 0 files
+        </p>
       </section>
 
       <AnimatePresence>
