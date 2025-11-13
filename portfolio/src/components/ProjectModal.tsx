@@ -16,7 +16,7 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
-  // ESCキーでモーダルを閉じる
+  // ESCキーでモーダルを閉じる & 背後のスクロールを防ぐ
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -24,10 +24,24 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       }
     };
 
+    // モーダルが開いたときに背後のスクロールを防ぐ
+    const originalOverflow = document.body.style.overflow;
+    const originalPosition = document.body.style.position;
+    const originalWidth = document.body.style.width;
+    
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+      
+      // モーダルが閉じたときに元に戻す
+      document.body.style.overflow = originalOverflow;
+      document.body.style.position = originalPosition;
+      document.body.style.width = originalWidth;
     };
   }, [onClose]);
 
@@ -43,7 +57,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   return (
     <motion.div
-      className="fixed inset-0 bg-black/70 flex justify-center items-center z-50 backdrop-blur-sm"
+      className="fixed inset-0 bg-black/70 flex justify-center items-center z-50 backdrop-blur-sm p-4 overflow-y-auto"
       variants={backdropVariants}
       initial="hidden"
       animate="visible"
@@ -51,7 +65,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       onClick={onClose}
     >
       <motion.div
-        className="bg-[#1E1E1E] border border-terminal-green/30 rounded-lg max-w-2xl w-11/12 shadow-xl font-mono"
+        className="bg-[#1E1E1E] border border-terminal-green/30 rounded-lg max-w-2xl w-full my-8 shadow-xl font-mono max-h-[90vh] overflow-y-auto"
         variants={modalVariants}
         initial="hidden"
         animate="visible"
