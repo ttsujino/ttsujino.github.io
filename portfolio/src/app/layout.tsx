@@ -13,37 +13,29 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ja">
       <head>{/* 必要に応じてメタタグを追加 */}</head>
       <body className="bg-terminal-bg text-terminal-text font-mono min-h-screen">
-        {/* Terminal Header */}
-        <header className="bg-[#1E1E1E] border-b border-terminal-green/30">
-          <div className="max-w-6xl mx-auto px-4 py-3">
-            {/* Terminal Window Controls */}
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 rounded-full bg-terminal-red"></div>
-              <div className="w-3 h-3 rounded-full bg-terminal-yellow"></div>
-              <div className="w-3 h-3 rounded-full bg-terminal-green"></div>
-              <span className="ml-4 text-sm text-terminal-text/70">tsujino@portfolio:~$</span>
-            </div>
-            {/* Navigation */}
+        {/* Simple Header */}
+        <header className="border-b border-terminal-text/20">
+          <div className="max-w-4xl mx-auto px-6 py-6">
             <nav>
-              <ul className="flex gap-6 text-sm">
+              <ul className="flex gap-6 text-base">
                 <li>
-                  <Link href="/" className="text-terminal-green hover:text-terminal-cyan transition-colors">
-                    $ ./home
+                  <Link href="/" className="text-terminal-text hover:text-terminal-green transition-colors underline">
+                    home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-terminal-green hover:text-terminal-cyan transition-colors">
-                    $ ./about
+                  <Link href="/about" className="text-terminal-text hover:text-terminal-green transition-colors underline">
+                    about
                   </Link>
                 </li>
                 <li>
-                  <Link href="/works" className="text-terminal-green hover:text-terminal-cyan transition-colors">
-                    $ ./works
+                  <Link href="/works" className="text-terminal-text hover:text-terminal-green transition-colors underline">
+                    works
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-terminal-green hover:text-terminal-cyan transition-colors">
-                    $ ./contact
+                  <Link href="/contact" className="text-terminal-text hover:text-terminal-green transition-colors underline">
+                    contact
                   </Link>
                 </li>
               </ul>
@@ -51,18 +43,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </header>
 
-        {/* Main Terminal Content */}
-        <main className="max-w-6xl mx-auto px-4 py-8">
-          <div className="bg-[#1E1E1E] border border-terminal-green/30 rounded-lg shadow-2xl p-6">
-            {children}
-          </div>
+        {/* Main Content */}
+        <main className="max-w-4xl mx-auto px-6 py-12">
+          {children}
         </main>
 
-        {/* Terminal Footer */}
-        <footer className="mt-8 text-center py-4 text-terminal-text/50 text-sm border-t border-terminal-green/30">
-          <p>
-            <span className="text-terminal-green">~/portfolio</span> © {new Date().getFullYear()} Tsujino. All rights reserved.
-          </p>
+        {/* Simple Footer */}
+        <footer className="mt-16 text-center py-6 text-terminal-text/40 text-xs border-t border-terminal-text/20">
+          <p>© {new Date().getFullYear()} Tsujino</p>
         </footer>
       </body>
     </html>
