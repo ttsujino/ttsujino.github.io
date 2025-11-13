@@ -12,8 +12,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #0C0C0C;
-  color: #CCCCCC;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   line-height: 1.6;
 }
@@ -24,14 +24,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0C0C0C;
+  background: #1E1E1E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #50B050;
+  background: #606060;
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #60C060;
+  background: #808080;
 }

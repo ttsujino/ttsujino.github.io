@@ -12,15 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         terminal: {
-          bg: "#0C0C0C",
-          text: "#A0A0A0",
+          bg: "#1E1E1E",
+          text: "#F0F0F0",
           green: "#50B050",
           blue: "#8A8A8A",
           yellow: "#B8B8B8",
           red: "#909090",
           purple: "#888888",
           cyan: "#959595",
-          white: "#D0D0D0",
+          white: "#FFFFFF",
         },
       },
       fontFamily: {
