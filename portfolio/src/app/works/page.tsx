@@ -48,15 +48,12 @@ export default function WorksPage() {
           {projects.map((project, index) => (
             <div
               key={project.slug}
-              className="space-y-2 cursor-pointer group"
+              className="cursor-pointer group"
               onClick={() => handleProjectClick(project)}
             >
               <h2 className="text-terminal-green underline group-hover:text-terminal-white transition-colors">
                 {project.title}
               </h2>
-              <p className="text-terminal-text/60 text-sm leading-relaxed">
-                {project.description}
-              </p>
             </div>
           ))}
         </div>
