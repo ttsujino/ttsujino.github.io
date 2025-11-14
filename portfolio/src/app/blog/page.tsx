@@ -8,7 +8,7 @@ export default function BlogPage() {
   return (
     <PageTransition>
       <section className="space-y-6">
-        <h1 className="text-4xl font-bold text-terminal-red mb-6">all posts</h1>
+        <h1 className="text-2xl font-bold text-white mb-6">All Posts</h1>
 
         <div className="space-y-0">
           {posts.map((post) => (
