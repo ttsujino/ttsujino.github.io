@@ -21,7 +21,12 @@ const timelineData = [
     date: "2022.1",
     title: "Promoted to Senior Engineer",
     description: "Taking on advanced technical responsibilities and leadership roles"
-  }
+  },
+  {
+    date: "2025.4",
+    title: "Enigmo Inc. - Data Scientist",
+    description: "Engaged in data science and machine learning"
+  },
 ];
 
 export default function AboutPage() {
