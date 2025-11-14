@@ -35,3 +35,17 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #808080;
 }
+
+/* ブログ記事の見出しスタイル */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  border-bottom: none !important;
+  text-decoration: none !important;
+  color: #50B050 !important; /* ブログの緑色 */
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
