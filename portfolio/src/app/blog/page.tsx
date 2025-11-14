@@ -14,15 +14,15 @@ export default function BlogPage() {
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="py-3 hover:bg-terminal-text/5 transition-colors"
+              className="py-3"
             >
-              <div className="flex justify-between items-baseline gap-4">
+              <div className="flex justify-between items-baseline gap-4 px-1 py-0 hover:bg-terminal-text/30 transition-colors">
                 <time className="text-terminal-text/60 text-sm font-mono whitespace-nowrap">
                   {post.date}
                 </time>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="text-terminal-text hover:text-terminal-green transition-colors text-right flex-1"
+                  className="text-terminal-text transition-colors text-right flex-1"
                 >
                   {post.title}
                 </Link>
