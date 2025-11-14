@@ -1,4 +1,28 @@
 import PageTransition from "../../components/PageTransition";
+import TimelineItem from "../../components/TimelineItem";
+
+const timelineData = [
+  {
+    date: "2018.3",
+    title: "Osaka University, Faculty of Law - Graduated",
+    description: "Built foundation in legal thinking and logical analysis"
+  },
+  {
+    date: "2018.4",
+    title: "Independent Administrative Agency - System Administrator",
+    description: "Engaged in information system management and operations"
+  },
+  {
+    date: "2020.9",
+    title: "Ridge-i Inc. - Machine Learning Engineer",
+    description: "Engaged in deep learning model development and implementation"
+  },
+  {
+    date: "2022.1",
+    title: "Promoted to Senior Engineer",
+    description: "Taking on advanced technical responsibilities and leadership roles"
+  }
+];
 
 export default function AboutPage() {
   return (
@@ -7,53 +31,14 @@ export default function AboutPage() {
         <h1 className="text-2xl font-bold text-terminal-white">About</h1>
 
         <div className="space-y-6">
-          <div className="space-y-3">
-            <div className="flex gap-2 md:gap-4 text-sm">
-              <span className="text-terminal-text/50 min-w-[60px] md:min-w-[100px]">2018.3</span>
-              <div className="flex-1 space-y-1">
-                <h3 className="text-terminal-white">Osaka University, Faculty of Law - Graduated</h3>
-                <p className="text-terminal-text/60 text-sm">
-                  Built foundation in legal thinking and logical analysis
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <div className="flex gap-2 md:gap-4 text-sm">
-              <span className="text-terminal-text/50 min-w-[60px] md:min-w-[100px]">2018.4</span>
-              <div className="flex-1 space-y-1">
-                <h3 className="text-terminal-white">Independent Administrative Agency - System Administrator</h3>
-                <p className="text-terminal-text/60 text-sm">
-                  Engaged in information system management and operations
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <div className="flex gap-2 md:gap-4 text-sm">
-              <span className="text-terminal-text/50 min-w-[60px] md:min-w-[100px]">2020.9</span>
-              <div className="flex-1 space-y-1">
-                <h3 className="text-terminal-white">Ridge-i Inc. - Machine Learning Engineer</h3>
-                <p className="text-terminal-text/60 text-sm">
-                  Engaged in deep learning model development and implementation
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <div className="flex gap-2 md:gap-4 text-sm">
-              <span className="text-terminal-text/50 min-w-[60px] md:min-w-[100px]">2022.1</span>
-              <div className="flex-1 space-y-1">
-                <h3 className="text-terminal-white">Promoted to Senior Engineer</h3>
-                <p className="text-terminal-text/60 text-sm">
-                  Taking on advanced technical responsibilities and leadership roles
-                </p>
-              </div>
-            </div>
-          </div>
+          {timelineData.map((item, index) => (
+            <TimelineItem
+              key={index}
+              date={item.date}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
         </div>
       </section>
     </PageTransition>
