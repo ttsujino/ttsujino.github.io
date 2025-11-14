@@ -8,8 +8,8 @@ export default function AboutPage() {
 
         <div className="space-y-6">
           <div className="space-y-3">
-            <div className="flex gap-4 text-sm">
-              <span className="text-terminal-text/50 min-w-[100px]">2018.3</span>
+            <div className="flex gap-2 md:gap-4 text-sm">
+              <span className="text-terminal-text/50 min-w-[60px] md:min-w-[100px]">2018.3</span>
               <div className="flex-1 space-y-1">
                 <h3 className="text-terminal-white">Osaka University, Faculty of Law - Graduated</h3>
                 <p className="text-terminal-text/60 text-sm">
@@ -20,8 +20,8 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-3">
-            <div className="flex gap-4 text-sm">
-              <span className="text-terminal-text/50 min-w-[100px]">2018.4</span>
+            <div className="flex gap-2 md:gap-4 text-sm">
+              <span className="text-terminal-text/50 min-w-[60px] md:min-w-[100px]">2018.4</span>
               <div className="flex-1 space-y-1">
                 <h3 className="text-terminal-white">Independent Administrative Agency - System Administrator</h3>
                 <p className="text-terminal-text/60 text-sm">
@@ -32,8 +32,8 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-3">
-            <div className="flex gap-4 text-sm">
-              <span className="text-terminal-text/50 min-w-[100px]">2020.9</span>
+            <div className="flex gap-2 md:gap-4 text-sm">
+              <span className="text-terminal-text/50 min-w-[60px] md:min-w-[100px]">2020.9</span>
               <div className="flex-1 space-y-1">
                 <h3 className="text-terminal-white">Ridge-i Inc. - Machine Learning Engineer</h3>
                 <p className="text-terminal-text/60 text-sm">
@@ -44,8 +44,8 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-3">
-            <div className="flex gap-4 text-sm">
-              <span className="text-terminal-text/50 min-w-[100px]">2022.1</span>
+            <div className="flex gap-2 md:gap-4 text-sm">
+              <span className="text-terminal-text/50 min-w-[60px] md:min-w-[100px]">2022.1</span>
               <div className="flex-1 space-y-1">
                 <h3 className="text-terminal-white">Promoted to Senior Engineer</h3>
                 <p className="text-terminal-text/60 text-sm">
