@@ -9,7 +9,7 @@ export default function ContactPage() {
 
         <div className="space-y-6">
           <p className="text-terminal-text/60 text-sm">
-            お問い合わせは以下のフォームよりお願いします。
+            Please contact me via email.
           </p>
 
           <form className="space-y-6">
