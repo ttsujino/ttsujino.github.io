@@ -45,7 +45,7 @@ export default async function BlogPost({
 
         {/* コンテンツ */}
         <div
-          className="prose prose-base max-w-none font-mono prose-headings:font-bold prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-h4:text-base"
+          className="prose prose-sm max-w-none font-mono prose-headings:font-bold prose-h1:text-2xl prose-h2:text-lg prose-h3:text-base prose-h4:text-sm"
           dangerouslySetInnerHTML={{ __html: postData.content || "" }}
         />
       </article>
