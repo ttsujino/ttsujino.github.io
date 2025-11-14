@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-terminal-bg text-terminal-text font-mono min-h-screen">
         {/* Simple Header */}
         <header className="border-b border-terminal-text/20">
-          <div className="max-w-3xl mx-auto px-8 py-6">
+          <div className="max-w-3xl mx-auto px-6 py-6">
             <nav>
               <ul className="flex gap-6 text-base">
                 <li>
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </header>
 
         {/* Main Content */}
-        <main className="max-w-3xl mx-auto px-8 py-12">
+        <main className="max-w-3xl mx-auto px-6 py-12">
           {children}
         </main>
 
