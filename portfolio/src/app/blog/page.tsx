@@ -20,7 +20,7 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="flex justify-between items-baseline gap-4 px-1 py-0 hover:bg-terminal-text/30 transition-colors"
               >
-                <time className="text-terminal-text/60 text-sm font-mono whitespace-nowrap">
+                <time className="text-terminal-text/60 text-base font-mono whitespace-nowrap">
                   {post.date}
                 </time>
                 <span className="text-terminal-text transition-colors text-right flex-1">
