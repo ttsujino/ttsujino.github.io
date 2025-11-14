@@ -14,26 +14,50 @@ body {
   padding: 0;
   background-color: #1E1E1E;
   color: #FFFFFF;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: 'JetBrains Mono', 'SF Mono', 'Roboto Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-weight: 300;
   line-height: 1.6;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* カスタムスクロールバー（ターミナル風） */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1E1E1E;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #606060;
-  border-radius: 6px;
+  background: rgba(120, 120, 120, 0.4);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #808080;
+  background: rgba(120, 120, 120, 0.6);
+}
+
+/* コードブロック専用のスクロールバー */
+.prose pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.prose pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.prose pre::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.35);
+  border-radius: 3px;
+}
+
+.prose pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.55);
 }
 
 /* ブログ記事の見出しスタイル */
@@ -48,4 +72,71 @@ body {
   color: #50B050 !important; /* ブログの緑色 */
   margin-top: 1.5em;
   margin-bottom: 0.75em;
+  font-weight: 400 !important;
+}
+
+/* コードブロックのスタイル */
+.prose pre {
+  font-size: 0.875rem !important;
+  line-height: 1.7 !important;
+}
+
+.prose code {
+  font-size: 0.85rem !important;
+}
+
+.prose pre code {
+  font-size: 0.875rem !important;
+}
+
+/* カスタムシンタックスハイライト（ターミナル風） */
+.prose pre code {
+  background-color: transparent !important;
+  color: #E0E0E0 !important;
+}
+
+/* コメント */
+.prose .hljs-comment,
+.prose .hljs-quote {
+  color: #6A9955 !important;
+  opacity: 0.6 !important;
+  font-style: italic !important;
+}
+
+/* キーワード */
+.prose .hljs-keyword,
+.prose .hljs-selector-tag,
+.prose .hljs-literal,
+.prose .hljs-section,
+.prose .hljs-link {
+  color: #569CD6 !important;
+}
+
+/* 文字列 */
+.prose .hljs-string {
+  color: #CE9178 !important;
+}
+
+/* 数値 */
+.prose .hljs-number {
+  color: #B5CEA8 !important;
+}
+
+/* 関数名 */
+.prose .hljs-title,
+.prose .hljs-function .hljs-title {
+  color: #DCDCAA !important;
+}
+
+/* 変数・プロパティ */
+.prose .hljs-attr,
+.prose .hljs-variable,
+.prose .hljs-property {
+  color: #9CDCFE !important;
+}
+
+/* 演算子 */
+.prose .hljs-operator,
+.prose .hljs-punctuation {
+  color: #D4D4D4 !important;
 }
