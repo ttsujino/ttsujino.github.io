@@ -23,7 +23,7 @@ export default function BlogPage() {
                 <time className="text-terminal-text/60 text-base font-mono whitespace-nowrap">
                   {post.date}
                 </time>
-                <span className="text-terminal-text transition-colors text-right flex-1">
+                <span className="text-terminal-text transition-colors text-right flex-1 truncate">
                   {post.title}
                 </span>
               </Link>
