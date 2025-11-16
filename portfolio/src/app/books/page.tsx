@@ -46,7 +46,7 @@ export default function BooksPage() {
                   )}
                 </div>
                   <div className="flex justify-between items-center gap-4">
-                    <div className="flex items-center gap-3 text-terminal-text/60 text-sm">
+                    <div className="flex items-center gap-3 text-terminal-text/60 text-xs">
                       <span>by {book.author}</span>
                       {book.category && (
                         <span className={`px-2 py-0.5 text-xs rounded whitespace-nowrap ${getCategoryStyle(book.category)}`}>
@@ -94,7 +94,7 @@ export default function BooksPage() {
                   
                   {/* 著者とカテゴリ */}
                   <div className="flex items-center gap-2 flex-wrap">
-                    <p className="text-sm text-terminal-text/70">
+                    <p className="text-xs text-terminal-text/70">
                       by {book.author}
                     </p>
                     {book.category && (
