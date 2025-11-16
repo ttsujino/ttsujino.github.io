@@ -112,7 +112,7 @@ export default function HomePage() {
                 className="cursor-pointer group"
                 onClick={() => handleProjectClick(project)}
               >
-                <h3 className="text-terminal-white underline group-hover:text-terminal-green transition-colors">
+                <h3 className="text-terminal-text/80 underline group-hover:text-terminal-green transition-colors">
                   {project.title}
                 </h3>
               </div>
