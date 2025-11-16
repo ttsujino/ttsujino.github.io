@@ -5,6 +5,19 @@ import { getSortedBooksData } from "../../lib/books";
 export default function BooksPage() {
   const books = getSortedBooksData();
 
+  const getCategoryStyle = (category?: string) => {
+    switch (category) {
+      case 'soft skill':
+        return 'bg-blue-900/30 text-blue-300 border border-blue-700/50';
+      case 'hard skill':
+        return 'bg-green-900/30 text-green-300 border border-green-700/50';
+      case 'others':
+        return 'bg-gray-700/30 text-gray-300 border border-gray-600/50';
+      default:
+        return 'bg-gray-700/30 text-gray-300 border border-gray-600/50';
+    }
+  };
+
   return (
     <PageTransition>
       <section className="space-y-6">
@@ -33,8 +46,13 @@ export default function BooksPage() {
                   )}
                 </div>
                   <div className="flex justify-between items-center gap-4">
-                    <div className="text-terminal-text/60 text-sm">
-                      by {book.author}
+                    <div className="flex items-center gap-3 text-terminal-text/60 text-sm">
+                      <span>by {book.author}</span>
+                      {book.category && (
+                        <span className={`px-2 py-0.5 text-xs rounded whitespace-nowrap ${getCategoryStyle(book.category)}`}>
+                          {book.category}
+                        </span>
+                      )}
                     </div>
                     <div className="text-terminal-text/60 text-sm font-mono whitespace-nowrap">
                       <span className="text-terminal-text/50">Started: </span>
@@ -74,10 +92,17 @@ export default function BooksPage() {
                     )}
                   </div>
                   
-                  {/* 著者 */}
-                  <p className="text-sm text-terminal-text/70">
-                    by {book.author}
-                  </p>
+                  {/* 著者とカテゴリ */}
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <p className="text-sm text-terminal-text/70">
+                      by {book.author}
+                    </p>
+                    {book.category && (
+                      <span className={`px-2 py-0.5 text-xs rounded whitespace-nowrap ${getCategoryStyle(book.category)}`}>
+                        {book.category}
+                      </span>
+                    )}
+                  </div>
                   
                   {/* 日付 */}
                   <div className="flex gap-4 text-xs text-terminal-text/60 font-mono">

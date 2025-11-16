@@ -1,6 +1,7 @@
 ---
 title: "Golden Son"
 author: "Pierce Brown"
+category: "others"
 status: "completed"
 startDate: "2025-10-20"
 finishDate: "2025-10-26"

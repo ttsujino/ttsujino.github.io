@@ -12,6 +12,7 @@ export interface BookData {
   slug: string;
   title: string;
   author: string;
+  category?: 'soft skill' | 'hard skill' | 'others';
   status?: 'reading' | 'completed';
   startDate?: string;
   finishDate?: string;
@@ -44,6 +45,7 @@ export function getSortedBooksData(): BookData[] {
         slug,
         title: matterResult.data.title || slug,
         author: matterResult.data.author || '',
+        category: matterResult.data.category as 'soft skill' | 'hard skill' | 'others' | undefined,
         status: matterResult.data.status as 'reading' | 'completed' | undefined,
         startDate: matterResult.data.startDate || '',
         finishDate: matterResult.data.finishDate || '',
@@ -89,6 +91,7 @@ export async function getBookData(slug: string): Promise<BookData> {
     slug,
     title: matterResult.data.title || slug,
     author: matterResult.data.author || '',
+    category: matterResult.data.category as 'soft skill' | 'hard skill' | 'others' | undefined,
     status: matterResult.data.status as 'reading' | 'completed' | undefined,
     startDate: matterResult.data.startDate || '',
     finishDate: matterResult.data.finishDate || '',
