@@ -21,7 +21,7 @@ export default function BooksPage() {
   return (
     <PageTransition>
       <section className="space-y-6">
-        <h1 className="text-2xl font-bold text-terminal-white mb-8">Books</h1>
+        <h1 className="text-2xl font-bold text-terminal-green mb-8">Books</h1>
 
         {/* デスクトップ表示 */}
         <div className="hidden md:block space-y-0">

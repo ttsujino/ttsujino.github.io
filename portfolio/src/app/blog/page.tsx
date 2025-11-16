@@ -8,7 +8,7 @@ export default function BlogPage() {
   return (
     <PageTransition>
       <section className="space-y-6">
-        <h1 className="text-2xl font-bold text-white mb-6">All Posts</h1>
+        <h1 className="text-2xl font-bold text-terminal-green mb-6">All Posts</h1>
 
         <div className="space-y-0">
           {posts.map((post) => (
@@ -20,12 +20,12 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="flex justify-between items-baseline gap-4 px-1 py-0 hover:bg-terminal-text/30 transition-colors"
               >
+                <span className="text-terminal-text transition-colors flex-1 truncate">
+                  {post.title}
+                </span>
                 <time className="text-terminal-text/60 text-base font-mono whitespace-nowrap">
                   {post.date}
                 </time>
-                <span className="text-terminal-text transition-colors text-right flex-1 truncate">
-                  {post.title}
-                </span>
               </Link>
             </article>
           ))}
