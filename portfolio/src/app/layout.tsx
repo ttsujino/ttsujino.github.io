@@ -24,11 +24,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-terminal-text hover:text-terminal-green transition-colors underline">
-                    about
-                  </Link>
-                </li>
-                <li>
                   <Link href="/works" className="text-terminal-text hover:text-terminal-green transition-colors underline">
                     works
                   </Link>
