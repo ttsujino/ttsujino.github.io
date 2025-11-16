@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja">
       <head>{/* 必要に応じてメタタグを追加 */}</head>
-      <body className="bg-terminal-bg text-terminal-text font-mono min-h-screen">
+      <body className="text-terminal-text font-mono min-h-screen">
         {/* Simple Header */}
         <header className="border-b border-terminal-text/20">
           <div className="max-w-3xl mx-auto px-6 py-6">
