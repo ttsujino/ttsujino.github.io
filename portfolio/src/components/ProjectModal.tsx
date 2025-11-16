@@ -24,14 +24,19 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       }
     };
 
+    // 現在のスクロール位置を保存
+    const scrollY = window.scrollY;
+    
     // モーダルが開いたときに背後のスクロールを防ぐ
     const originalOverflow = document.body.style.overflow;
     const originalPosition = document.body.style.position;
     const originalWidth = document.body.style.width;
+    const originalTop = document.body.style.top;
     
     document.body.style.overflow = 'hidden';
     document.body.style.position = 'fixed';
     document.body.style.width = '100%';
+    document.body.style.top = `-${scrollY}px`;
 
     window.addEventListener("keydown", handleKeyDown);
 
@@ -42,6 +47,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       document.body.style.overflow = originalOverflow;
       document.body.style.position = originalPosition;
       document.body.style.width = originalWidth;
+      document.body.style.top = originalTop;
+      
+      // スクロール位置を復元
+      window.scrollTo(0, scrollY);
     };
   }, [onClose]);
 
