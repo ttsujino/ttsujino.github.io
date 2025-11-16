@@ -51,46 +51,48 @@ export default function BooksPage() {
         </div>
 
         {/* モバイル表示 */}
-        <div className="md:hidden space-y-4">
+        <div className="md:hidden space-y-0">
           {books.map((book) => (
-            <Link
+            <article
               key={book.slug}
-              href={`/books/${book.slug}`}
-              className="block bg-terminal-bg hover:bg-terminal-text/10 transition-colors p-4"
+              className="border-b border-terminal-text/10 last:border-b-0"
             >
-              <div className="space-y-2">
-                {/* タイトル */}
-                <div className="flex items-center gap-2">
-                <h2 className="text-base font-semibold text-terminal-white">
-                  {book.title}
-                </h2>
-                  {book.status === 'reading' && (
-                    <span className="px-2 py-0.5 text-xs bg-[#5a5a2a] text-[#d4d47a] rounded whitespace-nowrap">
-                      reading
-                    </span>
-                  )}
-                </div>
-                
-                {/* 著者と日付 */}
-                <div className="flex justify-between items-center gap-4">
-                <p className="text-sm text-terminal-text/70">
-                  by {book.author}
-                </p>
-                  <div className="text-xs text-terminal-text/60 font-mono text-right">
-                  {book.startDate && (
+              <Link
+                href={`/books/${book.slug}`}
+                className="block hover:bg-terminal-text/5 transition-colors py-4"
+              >
+                <div className="space-y-2">
+                  {/* タイトル */}
+                  <div className="flex items-start gap-2">
+                    <h2 className="text-base font-semibold text-terminal-white flex-1">
+                      {book.title}
+                    </h2>
+                    {book.status === 'reading' && (
+                      <span className="px-2 py-0.5 text-xs bg-[#5a5a2a] text-[#d4d47a] rounded whitespace-nowrap">
+                        reading
+                      </span>
+                    )}
+                  </div>
+                  
+                  {/* 著者 */}
+                  <p className="text-sm text-terminal-text/70">
+                    by {book.author}
+                  </p>
+                  
+                  {/* 日付 */}
+                  <div className="flex gap-4 text-xs text-terminal-text/60 font-mono">
                     <div>
                       <span className="text-terminal-text/50">Started: </span>
-                      <time>{book.startDate}</time>
+                      <time>{book.startDate || '-'}</time>
                     </div>
-                  )}
-                  <div>
-                    <span className="text-terminal-text/50">Finished: </span>
-                    {book.finishDate && <time>{book.finishDate}</time>}
-                  </div>
+                    <div>
+                      <span className="text-terminal-text/50">Finished: </span>
+                      <time>{book.finishDate || '-'}</time>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </article>
           ))}
         </div>
 
