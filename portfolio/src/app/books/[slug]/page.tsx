@@ -24,6 +24,19 @@ export default async function BookDetail({
     notFound();
   }
 
+  const getCategoryStyle = (category?: string) => {
+    switch (category) {
+      case 'soft skill':
+        return 'bg-blue-900/30 text-blue-300 border border-blue-700/50';
+      case 'hard skill':
+        return 'bg-green-900/30 text-green-300 border border-green-700/50';
+      case 'others':
+        return 'bg-gray-700/30 text-gray-300 border border-gray-600/50';
+      default:
+        return 'bg-gray-700/30 text-gray-300 border border-gray-600/50';
+    }
+  };
+
   return (
     <PageTransition>
       <article className="space-y-6">
@@ -49,6 +62,14 @@ export default async function BookDetail({
               </>
             )}
           </div>
+          {bookData.category && (
+            <div className="text-sm text-terminal-text/80">
+              <span className="text-terminal-text/50">category: </span>
+              <span className={`px-2 py-0.5 text-xs rounded ${getCategoryStyle(bookData.category)}`}>
+                {bookData.category}
+              </span>
+            </div>
+          )}
           {(bookData.startDate || bookData.finishDate) && (
             <div className="text-sm text-terminal-text/70 space-y-1">
               {bookData.startDate && (
