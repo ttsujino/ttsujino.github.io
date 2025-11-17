@@ -1,7 +1,6 @@
 ---
 title: "Devlog 001"
 date: "2025-07-13"
-excerpt: "最初の開発ログです"
 ---
 
 # Devlog 001

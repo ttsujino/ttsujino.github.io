@@ -12,7 +12,6 @@ export interface PostData {
   slug: string;
   title: string;
   date: string;
-  excerpt: string;
   content?: string;
 }
 
@@ -42,7 +41,6 @@ export function getSortedPostsData(): PostData[] {
         slug,
         title: matterResult.data.title || slug,
         date: matterResult.data.date || '',
-        excerpt: matterResult.data.excerpt || '',
       };
     });
 
@@ -83,7 +81,6 @@ export async function getPostData(slug: string): Promise<PostData> {
     slug,
     title: matterResult.data.title || slug,
     date: matterResult.data.date || '',
-    excerpt: matterResult.data.excerpt || '',
     content: contentHtml,
   };
 }
