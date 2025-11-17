@@ -7,8 +7,5 @@ startDate: "2025-11-01"
 finishDate: ""
 ---
 
-# The Great Hunt
-
-## Overview
-
-The Great Hunt is the second book in The Wheel of Time series. The story expands significantly, introducing new cultures, magic systems, and deepening the mythology of the world.
+# Overview
+より効率的で生産的なプログラマーになりたいソフトウェア開発者に向けて、経験を積み、生産性を高め、ソフトウェア開発の全体をより良く理解するための実践的なアプローチが解説された書籍。

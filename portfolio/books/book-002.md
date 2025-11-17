@@ -1,14 +1,12 @@
 ---
-title: "教養としての日本地理"
-author: "浅井建爾"
-category: "others"
+title: "プロになるためのWeb技術入門"
+author: "小森 裕介"
+category: "hard skill"
 status: "reading"
-startDate: "2025-11-16"
+startDate: "2025-11-01"
 finishDate: ""
 ---
 
-# The Great Hunt
-
 ## Overview
-This book offers the essential knowledge of Japanese geography every professional should know—
-clearly explained through maps and data at a glance.
+Webシステムを作るのに必要な技術の仕組みを説明した技術書。
+
