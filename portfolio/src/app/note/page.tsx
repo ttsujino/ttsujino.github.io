@@ -21,7 +21,7 @@ export default function NotePage() {
                 rel="noopener noreferrer"
                 className="block px-1 py-3 hover:bg-terminal-text/30 transition-colors peer"
               >
-                <div className="flex justify-between items-baseline gap-4">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4">
                   <span className="text-terminal-text transition-colors flex-1 truncate">
                     {note.title}
                   </span>
