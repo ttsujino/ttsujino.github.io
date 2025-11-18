@@ -83,9 +83,8 @@ export default function HomePage() {
         <div className="space-y-4 pt-4">
           <h2 className="text-xl font-bold text-terminal-white">bio</h2>
           <p className="text-terminal-text/70 text-sm leading-relaxed">
-            Working as a Machine Learning Engineer specializing in deep learning model development and implementation.<br />
-            After graduating from Osaka University Faculty of Law, worked as a system administrator at an independent administrative agency,<br />
-            and currently serving as a Senior Engineer at Ridge-i Inc.
+            Working as a Machine Learning Engineer, developing both machine learning models and the systems that apply them.
+            Recently, I have been engaged in LLM projects, especially in the field of agentic AI, but I have a broad interest that spans from low-level to high-level layers.
           </p>
         </div>
 
