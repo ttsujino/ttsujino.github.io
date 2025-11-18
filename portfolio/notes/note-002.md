@@ -1,9 +1,9 @@
 ---
 title: 安定したAIエージェント開発・運用を実現するLangfuse活用方法
 url: https://tech.layerx.co.jp/entry/stable-ai-agent-dev-with-langfuse
+author: onsd_
 date: "2025-11-17"
 excerpt: AIエージェント開発における課題を解決するためにLangfuseの活用事例を紹介した記事。
-tags: ["llm", "agent", "langfuse"]
 ---
 
 # Memo

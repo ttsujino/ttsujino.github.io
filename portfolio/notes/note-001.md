@@ -1,9 +1,9 @@
 ---
 title: 強い人達の調査/勉強法まとめ
 url: https://zenn.dev/soma3134/articles/5ba60a7e0d6925
+author: kzk4043
 date: "2025-11-17"
 excerpt: ゆめみ/虎の穴ラボの「勉強法の勉強会」や社内インタビューを元に強い人たちの調査/勉強方法をまとめた記事。
-tags: ["study"]
 ---
 
 # Memo

@@ -1,9 +1,9 @@
 ---
 title: Why Evaluate Agents
 url: https://google.github.io/adk-docs/evaluate/
+author: google adk team
 date: "2025-11-17"
 excerpt: ADKの公式ドキュメント。評価の重要性や評価方法について解説している。
-tags: ["llm", "agent", "adk"]
 ---
 
 # Memo

@@ -10,7 +10,7 @@ export interface NoteData {
   url: string;
   date: string;
   excerpt: string;
-  tags: string[];
+  author?: string;
 }
 
 export function getSortedNotesData(): NoteData[] {
@@ -41,7 +41,7 @@ export function getSortedNotesData(): NoteData[] {
         url: matterResult.data.url || '',
         date: matterResult.data.date || '',
         excerpt: matterResult.data.excerpt || '',
-        tags: matterResult.data.tags || [],
+        author: matterResult.data.author,
       };
     });
 

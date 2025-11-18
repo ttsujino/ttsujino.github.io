@@ -1,9 +1,9 @@
 ---
 title: がんばるとろくなことは無い
 url: https://note.com/simplearchitect/n/n13e6da47bd39
+author: 牛尾 剛
 date: "2025-11-18"
-excerpt: 「楽に出来るように一生懸命働くんだよ。」
-tags: ["work"]
+excerpt: 楽に出来るように一生懸命働くんだよ。
 ---
 
 # Memo
