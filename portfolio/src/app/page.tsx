@@ -47,7 +47,7 @@ export default function HomePage() {
       slug: "project-2",
       title: "Deep Learning Modeling Project with Satellite Images",
       description:
-        "This project focused on developing a proof-of-concept (PoC) web application that allows users to pre-register when disposing of rechargeable batteries.",
+        "This project focused on developing a deep learning model that detects shadows in satellite images. The model achieved a high accuracy in detecting shadows, and the project was successfully implemented in a real-world application.",
     },
     {
       slug: "project-3",
