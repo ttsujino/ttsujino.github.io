@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeStringify from 'rehype-stringify';
 
@@ -71,7 +72,8 @@ export async function getPostData(slug: string): Promise<PostData> {
 
   // remarkを使用してMarkdownをHTMLに変換（シンタックスハイライト付き）
   const processedContent = await remark()
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(matterResult.content);
