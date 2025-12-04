@@ -1,7 +1,7 @@
 ---
-title: 遂行力はどこで差がつくのか
-url: https://note.com/ryota_man/n/nba41587ea2f8
-author: ryottaman
-date: "2025-11-20"
-excerpt: 文脈をつかみ、動きながら目的を整え、工程を先に設計し、予定でリズムをつくり、初動を早くし、外に原因を置かない。
+title: プロフェッショナルプログラミング【第1講】
+url: https://www.youtube.com/watch?v=Q1OdwQ4DZRo
+author: 伊藤 直也
+date: "2025-12-04"
+excerpt: ドメイン・プレゼンテーション分離を中心に、「プログラムの構造化とデザイン」を解説した動画
 ---
