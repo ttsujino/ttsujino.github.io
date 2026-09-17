@@ -66,7 +66,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   return (
     <motion.div
-      className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 backdrop-blur-sm p-4 overflow-y-auto"
+      className="fixed inset-0 bg-black flex justify-center items-center z-50 p-4 overflow-y-auto"
       variants={backdropVariants}
       initial="hidden"
       animate="visible"
@@ -74,7 +74,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       onClick={onClose}
     >
       <motion.div
-        className="bg-[#1E1E1E] border border-terminal-green/30 max-w-2xl w-full my-8 font-mono max-h-[90vh] overflow-y-auto relative"
+        className="bg-white border border-neutral-300 max-w-2xl w-full my-8 font-mono max-h-[90vh] overflow-y-auto relative"
         variants={modalVariants}
         initial="hidden"
         animate="visible"
@@ -83,14 +83,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       >
         {/* Header */}
         <div className="px-6 sm:px-8 pt-6 pb-4">
-          <h2 className="text-lg font-normal text-terminal-white leading-relaxed">
+          <h2 className="text-lg font-normal text-black leading-relaxed">
             {project.title}
           </h2>
         </div>
 
         {/* Content */}
         <div className="px-6 sm:px-8 pb-4">
-          <p className="text-terminal-text/70 leading-relaxed text-sm">
+          <p className="text-black leading-relaxed text-sm">
             {project.description}
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         <div className="px-6 sm:px-8 pb-4 flex justify-end">
           <button
             onClick={onClose}
-            className="text-terminal-green hover:text-terminal-white transition-colors text-sm underline"
+            className="text-black text-sm underline"
             aria-label="Close modal"
           >
             Close (ESC)

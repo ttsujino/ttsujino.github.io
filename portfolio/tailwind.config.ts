@@ -9,18 +9,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#ffffff",
+        foreground: "#000000",
         terminal: {
-          bg: "#1E1E1E",
-          text: "#F0F0F0",
-          green: "#FFFFFF",
-          blue: "#8A8A8A",
-          yellow: "#B8B8B8",
-          red: "#909090",
-          purple: "#888888",
-          cyan: "#959595",
-          white: "#FFFFFF",
+          bg: "#ffffff",
+          text: "#000000",
+          green: "#000000",
+          blue: "#000000",
+          yellow: "#000000",
+          red: "#000000",
+          purple: "#000000",
+          cyan: "#000000",
+          white: "#000000",
         },
       },
       fontFamily: {
@@ -38,95 +38,90 @@ export default {
       typography: (theme: any) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.terminal.text'),
-            maxWidth: 'none',
+            color: "#000000",
+            maxWidth: "none",
             a: {
-              color: theme('colors.terminal.green'),
-              textDecoration: 'underline',
-              '&:hover': {
-                color: theme('colors.terminal.white'),
+              color: "#000000",
+              textDecoration: "underline",
+              "&:hover": {
+                color: "#000000",
               },
             },
             h1: {
-              color: theme('colors.terminal.white'),
-              fontWeight: '700',
-              borderBottomWidth: '1px',
-              borderBottomColor: 'rgba(255, 255, 255, 0.2)',
-              paddingBottom: '0.3em',
+              color: "#000000",
+              fontWeight: "700",
             },
             h2: {
-              color: theme('colors.terminal.white'),
-              fontWeight: '700',
-              borderBottomWidth: '1px',
-              borderBottomColor: 'rgba(255, 255, 255, 0.1)',
-              paddingBottom: '0.3em',
+              color: "#000000",
+              fontWeight: "700",
             },
             h3: {
-              color: theme('colors.terminal.white'),
-              fontWeight: '700',
+              color: "#000000",
+              fontWeight: "700",
             },
             h4: {
-              color: theme('colors.terminal.white'),
-              fontWeight: '700',
+              color: "#000000",
+              fontWeight: "700",
             },
             h5: {
-              color: theme('colors.terminal.white'),
-              fontWeight: '700',
+              color: "#000000",
+              fontWeight: "700",
             },
             h6: {
-              color: theme('colors.terminal.white'),
-              fontWeight: '700',
+              color: "#000000",
+              fontWeight: "700",
             },
             strong: {
-              color: theme('colors.terminal.white'),
-              fontWeight: '700',
+              color: "#000000",
+              fontWeight: "700",
             },
             code: {
-              color: '#C8C8C8',
-              backgroundColor: '#2D2D2D',
-              padding: '0.2em 0.4em',
-              borderRadius: '3px',
-              fontWeight: '400',
+              color: "#000000",
+              backgroundColor: "#f3f3f3",
+              padding: "0.2em 0.4em",
+              borderRadius: "0",
+              fontWeight: "400",
             },
-            'code::before': {
+            "code::before": {
               content: '""',
             },
-            'code::after': {
+            "code::after": {
               content: '""',
             },
             pre: {
-              backgroundColor: '#2D2D2D',
-              color: theme('colors.terminal.text'),
-              padding: '1em',
-              borderRadius: '5px',
-              overflowX: 'auto',
+              backgroundColor: "#f3f3f3",
+              color: "#000000",
+              padding: "1em",
+              borderRadius: "0",
+              border: "1px solid #d4d4d4",
+              overflowX: "auto",
             },
-            'pre code': {
-              backgroundColor: 'transparent',
-              padding: '0',
-              color: theme('colors.terminal.text'),
+            "pre code": {
+              backgroundColor: "transparent",
+              padding: "0",
+              color: "#000000",
             },
             blockquote: {
-              borderLeftColor: theme('colors.terminal.green'),
-              borderLeftWidth: '4px',
-              paddingLeft: '1em',
-              color: '#B0B0B0',
-              fontStyle: 'italic',
+              borderLeftColor: "#000000",
+              borderLeftWidth: "4px",
+              paddingLeft: "1em",
+              color: "#000000",
+              fontStyle: "italic",
             },
             ul: {
-              listStyleType: 'disc',
+              listStyleType: "disc",
             },
             ol: {
-              listStyleType: 'decimal',
+              listStyleType: "decimal",
             },
             li: {
-              color: theme('colors.terminal.text'),
+              color: "#000000",
             },
-            'ul > li::marker': {
-              color: theme('colors.terminal.green'),
+            "ul > li::marker": {
+              color: "#000000",
             },
-            'ol > li::marker': {
-              color: theme('colors.terminal.green'),
+            "ol > li::marker": {
+              color: "#000000",
             },
           },
         },
@@ -134,6 +129,6 @@ export default {
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    require("@tailwindcss/typography"),
   ],
 } satisfies Config;

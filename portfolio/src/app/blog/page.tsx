@@ -8,7 +8,7 @@ export default function BlogPage() {
   return (
     <PageTransition>
       <section className="space-y-6">
-        <h1 className="text-2xl font-bold text-terminal-green mb-6">All Posts</h1>
+        <h1 className="text-2xl font-bold text-black mb-6">All Posts</h1>
 
         <div className="space-y-0">
           {posts.map((post) => (
@@ -18,12 +18,12 @@ export default function BlogPage() {
             >
               <Link
                 href={`/blog/${post.slug}`}
-                className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4 px-1 py-0 hover:bg-terminal-text/30 transition-colors"
+                className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 sm:gap-4 px-1 py-0"
               >
-                <span className="text-terminal-text transition-colors flex-1 truncate">
+                <span className="text-black flex-1 truncate">
                   {post.title}
                 </span>
-                <time className="text-terminal-text/60 text-base font-mono whitespace-nowrap">
+                <time className="text-black text-base font-mono whitespace-nowrap">
                   {post.date}
                 </time>
               </Link>
@@ -32,7 +32,7 @@ export default function BlogPage() {
         </div>
 
         {posts.length === 0 && (
-          <p className="text-terminal-text/60">No posts yet.</p>
+          <p className="text-black">No posts yet.</p>
         )}
       </section>
     </PageTransition>

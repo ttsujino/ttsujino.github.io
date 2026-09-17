@@ -32,15 +32,15 @@ export default function WorkPage() {
   return (
     <PageTransition>
       <section className="space-y-6">
-        <h1 className="text-2xl font-bold text-terminal-green mb-8">works</h1>
+        <h1 className="text-2xl font-bold text-black mb-8">works</h1>
         <div className="space-y-6">
           {projects.map((project) => (
             <div
               key={project.slug}
-              className="cursor-pointer group"
+              className="cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              <h2 className="text-terminal-text/80 underline group-hover:text-terminal-green transition-colors">
+              <h2 className="text-black underline">
                 {project.title}
               </h2>
             </div>

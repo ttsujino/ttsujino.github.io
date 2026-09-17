@@ -28,17 +28,17 @@ export default async function BlogPost({
     <PageTransition>
       <article className="space-y-6">
         {/* ヘッダー */}
-        <header className="space-y-4 pb-6 border-b border-terminal-text/20">
+        <header className="space-y-4 pb-6 border-b border-neutral-300">
           <Link
             href="/blog"
-            className="text-terminal-green hover:text-terminal-green/80 text-sm inline-block mb-4"
+            className="text-black text-sm inline-block mb-4 underline"
           >
             ← Back to all posts
           </Link>
-          <h1 className="text-3xl font-bold text-terminal-white">
+          <h1 className="text-3xl font-bold text-black">
             {postData.title}
           </h1>
-          <time className="text-terminal-text/60 text-sm font-mono block">
+          <time className="text-black text-sm font-mono block">
             {postData.date}
           </time>
         </header>

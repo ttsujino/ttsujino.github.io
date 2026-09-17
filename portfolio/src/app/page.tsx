@@ -35,25 +35,25 @@ export default function HomePage() {
     <PageTransition>
       <section className="space-y-8">
         <div className="space-y-6">
-          <h1 className="text-3xl font-bold text-terminal-green">
+          <h1 className="text-3xl font-bold text-black">
             Takeshi Tsujino
           </h1>
-          <div className="space-y-2 text-terminal-text/80">
+          <div className="space-y-2 text-black">
             <p>Machine Learning Engineer | Data Scientist</p>
             <p>Based in Japan</p>
           </div>
         </div>
 
         <div className="space-y-4 pt-4">
-          <h2 className="text-xl font-bold text-terminal-white">bio</h2>
-          <p className="text-terminal-text/70 text-sm leading-relaxed">
+          <h2 className="text-xl font-bold text-black">bio</h2>
+          <p className="text-black text-sm leading-relaxed">
             Working as a Machine Learning Engineer, developing both machine learning models and the systems that apply them.
             Recently, I have been engaged in LLM projects, especially in the field of agentic AI, but I have a broad interest that spans from low-level to high-level layers.
           </p>
         </div>
 
         <div className="space-y-6 pt-4">
-          <h2 className="text-xl font-bold text-terminal-white">career</h2>
+          <h2 className="text-xl font-bold text-black">career</h2>
           <div className="space-y-6">
             {timelineData.map((item, index) => (
               <TimelineItem
