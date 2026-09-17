@@ -1,4 +1,3 @@
-// components/ProjectModal.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -7,6 +6,7 @@ import React, { useEffect } from "react";
 export interface Project {
   slug: string;
   title: string;
+  stack: string[];
   description: string;
 }
 
@@ -16,7 +16,6 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
-  // ESCキーでモーダルを閉じる & 背後のスクロールを防ぐ
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -24,32 +23,28 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       }
     };
 
-    // 現在のスクロール位置を保存
     const scrollY = window.scrollY;
-    
-    // モーダルが開いたときに背後のスクロールを防ぐ
+
     const originalOverflow = document.body.style.overflow;
     const originalPosition = document.body.style.position;
     const originalWidth = document.body.style.width;
     const originalTop = document.body.style.top;
-    
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
+
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
     document.body.style.top = `-${scrollY}px`;
 
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      
-      // モーダルが閉じたときに元に戻す
+
       document.body.style.overflow = originalOverflow;
       document.body.style.position = originalPosition;
       document.body.style.width = originalWidth;
       document.body.style.top = originalTop;
-      
-      // スクロール位置を復元
+
       window.scrollTo(0, scrollY);
     };
   }, [onClose]);
@@ -60,52 +55,54 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   };
 
   const modalVariants = {
-    hidden: { opacity: 0, scale: 0.95, y: 20 },
-    visible: { opacity: 1, scale: 1, y: 0 },
+    hidden: { opacity: 0, y: 8 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
     <motion.div
-      className="fixed inset-0 bg-black flex justify-center items-center z-50 p-4 overflow-y-auto"
+      className="fixed inset-0 bg-black/30 flex justify-center items-start z-50 p-4 sm:p-8 overflow-y-auto"
       variants={backdropVariants}
       initial="hidden"
       animate="visible"
       exit="hidden"
       onClick={onClose}
     >
-      <motion.div
-        className="bg-white border border-neutral-300 max-w-2xl w-full my-8 font-mono max-h-[90vh] overflow-y-auto relative"
+      <motion.article
+        className="bg-white border border-neutral-300 max-w-3xl w-full my-4 sm:my-8 font-mono"
         variants={modalVariants}
         initial="hidden"
         animate="visible"
         exit="hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
-        <div className="px-6 sm:px-8 pt-6 pb-4">
-          <h2 className="text-lg font-normal text-black leading-relaxed">
+        <header className="px-6 sm:px-8 py-6 border-b border-neutral-300">
+          <h2 className="text-base sm:text-lg font-bold text-black leading-snug">
             {project.title}
           </h2>
-        </div>
+        </header>
 
-        {/* Content */}
-        <div className="px-6 sm:px-8 pb-4">
-          <p className="text-black leading-relaxed text-sm">
+        <div className="px-6 sm:px-8 py-6 space-y-5">
+          <p className="text-sm text-black leading-relaxed">
             {project.description}
           </p>
+
+          <div className="grid grid-cols-[7.5rem_1fr] gap-x-4 text-sm border-t border-neutral-300 pt-5">
+            <dt className="text-neutral-500 shrink-0">stack</dt>
+            <dd className="text-black min-w-0">{project.stack.join(" / ")}</dd>
+          </div>
         </div>
 
-        {/* Close button - positioned at bottom right */}
-        <div className="px-6 sm:px-8 pb-4 flex justify-end">
+        <footer className="px-6 sm:px-8 pb-6">
           <button
             onClick={onClose}
             className="text-black text-sm underline"
             aria-label="Close modal"
           >
-            Close (ESC)
+            close (esc)
           </button>
-        </div>
-      </motion.div>
+        </footer>
+      </motion.article>
     </motion.div>
   );
 }

@@ -8,22 +8,54 @@ import ProjectModal, { Project } from "../../components/ProjectModal";
 export default function WorkPage() {
   const projects: Project[] = [
     {
-      slug: "project-1",
-      title: "Deep Learning Modeling Project with Semiconductor Images",
+      slug: "sem-inspection",
+      title: "SEM image analysis models for semiconductor inspection",
+      stack: ["PyTorch", "OpenCV", "Linux / Windows", "PyArmor"],
       description:
-        "In this project, I developed and commercialized models that extract information from magnified images of semiconductor products obtained via electron microscopes. The project consisted of multiple phases, each requiring different information extraction tasks. Ultimately, three unique deep learning models were developed and licensed as products.",
+        "Built production models that extract inspection signals from electron-microscope images of semiconductor devices. Each project phase targeted a different extraction task; three models were licensed and sold as products.",
     },
     {
-      slug: "project-2",
-      title: "Deep Learning Modeling Project with Satellite Images",
+      slug: "coupon-ranking",
+      title: "Large-scale coupon allocation model (retail)",
+      stack: [
+        "GCP",
+        "Vertex AI",
+        "BigQuery",
+        "GCS",
+        "Cloud Functions",
+        "Cloud Build",
+        "PySpark",
+      ],
       description:
-        "This project focused on developing a deep learning model that detects shadows in satellite images. The model achieved a high accuracy in detecting shadows, and the project was successfully implemented in a real-world application.",
+        "Developed and operated a machine-learning system that decides which coupon to send to each user from large-scale demographic and purchase-history data for a convenience-store chain.",
     },
     {
-      slug: "project-3",
-      title: "Data Science Project in Retail Stores",
+      slug: "battery-poc",
+      title: "Battery take-back registration web app (PoC)",
+      stack: ["AWS", "Next.js", "MySQL", "SQLAlchemy"],
       description:
-        "This project involved developing and deploying a machine learning model that determines which coupons to distribute to individual users based on large-scale data, including demographic information and purchase history.",
+        "Built a PoC web application for pre-registering rechargeable batteries before disposal, covering frontend and cloud infrastructure.",
+    },
+    {
+      slug: "satellite-cloud-shadow",
+      title: "Cloud / shadow detection on multi-sensor satellite imagery",
+      stack: ["PyTorch", "OpenCV", "GeoPandas", "Rasterio", "DVC", "Linux"],
+      description:
+        "Constructed semantic-segmentation models that detect clouds and shadows in imagery from three satellites (ASNARO, Sentinel, GRUS), for automated base-map production on the Tellus platform.",
+    },
+    {
+      slug: "defect-classification",
+      title: "Manufacturing defect detection (image classification)",
+      stack: ["TensorFlow", "OpenCV", "Grad-CAM"],
+      description:
+        "Developed a classification model to detect damaged parts in manufacturing images, using Grad-CAM to inspect what the model attended to.",
+    },
+    {
+      slug: "farrowing-detection",
+      title: "Farrowing-status monitoring with object detection",
+      stack: ["PyTorch", "OpenCV", "YOLOv5"],
+      description:
+        "Built a video system that detects piglets with YOLOv5 and infers whether farrowing is ongoing or finished, raising an alert when new piglets stop appearing for a set period.",
     },
   ];
 
@@ -32,18 +64,19 @@ export default function WorkPage() {
   return (
     <PageTransition>
       <section className="space-y-6">
-        <h1 className="text-2xl font-bold text-black mb-8">works</h1>
-        <div className="space-y-6">
+        <h1 className="text-2xl font-bold text-black mb-6">works</h1>
+        <div className="space-y-0">
           {projects.map((project) => (
-            <div
+            <button
               key={project.slug}
-              className="cursor-pointer"
+              type="button"
+              className="w-full text-left py-3 cursor-pointer group"
               onClick={() => setSelectedProject(project)}
             >
-              <h2 className="text-black underline">
+              <span className="text-black underline decoration-neutral-300 group-hover:decoration-black">
                 {project.title}
-              </h2>
-            </div>
+              </span>
+            </button>
           ))}
         </div>
       </section>
