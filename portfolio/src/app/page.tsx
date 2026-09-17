@@ -9,8 +9,8 @@ const timelineData = [
     description: "Engaged in data science and machine learning"
   },
   {
-    date: "2022.1",
-    title: "Promoted to Senior Engineer",
+    date: "2023.1",
+    title: "Ridge-i Inc. - Senior Machine Learning Engineer",
     description: "Taking on advanced technical responsibilities and leadership roles"
   },
   {
