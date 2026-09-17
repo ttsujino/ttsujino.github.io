@@ -89,7 +89,7 @@ body::before {
 .prose h6 {
   border-bottom: none !important;
   text-decoration: none !important;
-  color: #50B050 !important; /* ブログの緑色 */
+  color: #FFFFFF !important;
   margin-top: 1.5em;
   margin-bottom: 0.75em;
   font-weight: 400 !important;
@@ -118,7 +118,7 @@ body::before {
 /* コメント */
 .prose .hljs-comment,
 .prose .hljs-quote {
-  color: #6A9955 !important;
+  color: #808080 !important;
   opacity: 0.6 !important;
   font-style: italic !important;
 }
@@ -129,30 +129,30 @@ body::before {
 .prose .hljs-literal,
 .prose .hljs-section,
 .prose .hljs-link {
-  color: #569CD6 !important;
+  color: #B0B0B0 !important;
 }
 
 /* 文字列 */
 .prose .hljs-string {
-  color: #CE9178 !important;
+  color: #A8A8A8 !important;
 }
 
 /* 数値 */
 .prose .hljs-number {
-  color: #B5CEA8 !important;
+  color: #C0C0C0 !important;
 }
 
 /* 関数名 */
 .prose .hljs-title,
 .prose .hljs-function .hljs-title {
-  color: #DCDCAA !important;
+  color: #D0D0D0 !important;
 }
 
 /* 変数・プロパティ */
 .prose .hljs-attr,
 .prose .hljs-variable,
 .prose .hljs-property {
-  color: #9CDCFE !important;
+  color: #B8B8B8 !important;
 }
 
 /* 演算子 */

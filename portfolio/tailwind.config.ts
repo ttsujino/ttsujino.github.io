@@ -14,7 +14,7 @@ export default {
         terminal: {
           bg: "#1E1E1E",
           text: "#F0F0F0",
-          green: "#50B050",
+          green: "#FFFFFF",
           blue: "#8A8A8A",
           yellow: "#B8B8B8",
           red: "#909090",
@@ -82,7 +82,7 @@ export default {
               fontWeight: '700',
             },
             code: {
-              color: '#CE9178',
+              color: '#C8C8C8',
               backgroundColor: '#2D2D2D',
               padding: '0.2em 0.4em',
               borderRadius: '3px',
