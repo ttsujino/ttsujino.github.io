@@ -28,7 +28,7 @@ export default async function BlogPost({
     <PageTransition>
       <article className="space-y-6">
         {/* ヘッダー */}
-        <header className="space-y-4 pb-6 border-b border-neutral-300">
+        <header className="space-y-4 pb-6 border-b border-black">
           <Link
             href="/blog"
             className="text-black text-sm inline-block mb-4 underline"

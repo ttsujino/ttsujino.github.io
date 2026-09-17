@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>{/* 必要に応じてメタタグを追加 */}</head>
       <body className="bg-white text-black font-mono min-h-screen">
         {/* Simple Header */}
-        <header className="border-b border-neutral-300">
+        <header className="border-b border-black">
           <div className="max-w-3xl mx-auto px-6 py-6">
             <nav>
               <ul className="flex gap-6 text-base">
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </main>
 
         {/* Simple Footer */}
-        <footer className="mt-16 text-center py-6 text-black text-xs border-t border-neutral-300">
+        <footer className="mt-16 text-center py-6 text-black text-xs border-t border-black">
           <p>© {new Date().getFullYear()} Tsujino</p>
         </footer>
       </body>
